@@ -1,0 +1,183 @@
+/* TaskDashboard.css */
+.dashboard {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 24px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1a1a1a;
+    margin-bottom: 24px;
+  }
+  
+  /* Progress Bar Styles */
+  .progress-container {
+    margin-bottom: 24px;
+  }
+  
+  .progress-bar {
+    height: 8px;
+    background-color: #e5e7eb;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .progress-fill {
+    height: 100%;
+    background-color: #3b82f6;
+    transition: width 0.5s ease;
+  }
+  
+  .progress-text {
+    font-size: 14px;
+    color: #666;
+    margin-top: 8px;
+  }
+  
+  /* Form Styles */
+  .task-form {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+  
+  .task-input {
+    flex: 1;
+    padding: 8px 16px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .task-input:focus {
+    outline: none;
+    border-color: #3b82f6;
+  }
+  
+  .add-button {
+    padding: 8px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-button:hover {
+    background-color: #2563eb;
+  }
+  
+  /* Alert Styles */
+  .alert {
+    background-color: #f0fdf4;
+    border: 1px solid #86efac;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+  
+  .alert h4 {
+    color: #166534;
+    margin: 0 0 4px 0;
+  }
+  
+  .alert p {
+    color: #166534;
+    margin: 0;
+  }
+  
+  /* Task List Styles */
+  .task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    background-color: #f9fafb;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .task-item:hover {
+    background-color: #f3f4f6;
+  }
+  
+  .task-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .toggle-button, .delete-button {
+    background: none;
+    border: none;
+    padding: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s ease;
+  }
+  
+  .toggle-button {
+    color: #9ca3af;
+  }
+  
+  .toggle-button:hover {
+    color: #3b82f6;
+  }
+  
+  .delete-button {
+    color: #9ca3af;
+  }
+  
+  .delete-button:hover {
+    color: #ef4444;
+  }
+  
+  .check-icon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .check-icon.completed {
+    color: #22c55e;
+  }
+  
+  .task-title {
+    color: #1a1a1a;
+    font-size: 16px;
+  }
+  
+  .task-title.completed {
+    text-decoration: line-through;
+    color: #9ca3af;
+  }
+  
+  /* Animations */
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .task-item {
+    animation: slideIn 0.3s ease;
+  }
